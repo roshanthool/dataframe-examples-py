@@ -51,6 +51,7 @@ if __name__ == '__main__':
     print('result')
     join_pair_rdd.filter(lambda rec: (rec[1][0][2] == "Switzerland") and (rec[1][1][0] == 1) and (rec[1][1][1] == 1)) \
 
+
     join_pair_rdd.foreach(print)
 
 # spark-submit --packages "org.apache.hadoop:hadoop-aws:2.7.4" --master yarn rdd/scholaship_recipient_join_filter.py
