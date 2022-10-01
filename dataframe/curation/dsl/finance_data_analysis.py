@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     # concat_ws function available sql.functions
     finance_df\
-        .select(concat_ws(" - ", "AccountNumber", "Description").alias("AccountDetails"))\
+        .select('*', concat_ws(" - ", "AccountNumber", "Description").alias("AccountDetails"))\
         .show(5, False)
 
     finance_df\
