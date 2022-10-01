@@ -9,7 +9,6 @@ if __name__ == '__main__':
         .builder \
         .appName("DSL examples") \
         .master('local[*]') \
-        .config("spark.sql.crossJoin.enabled", True) \
         .getOrCreate()
     spark.sparkContext.setLogLevel('ERROR')
 
