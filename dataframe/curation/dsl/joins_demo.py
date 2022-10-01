@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import broadcast
+from pyspark.sql.functions import *
 from model.Role import Role
 from model.Employee import Employee
 
@@ -9,6 +9,7 @@ if __name__ == '__main__':
         .builder \
         .appName("DSL examples") \
         .master('local[*]') \
+        .config("spark.sql.crossJoin.enabled", True) \
         .getOrCreate()
     spark.sparkContext.setLogLevel('ERROR')
 
