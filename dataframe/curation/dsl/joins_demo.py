@@ -38,6 +38,7 @@ if __name__ == '__main__':
     emp_df.join(role_df, [emp_df["id"] == role_df["id"]], "inner").show()
     emp_df.join(role_df, [emp_df["id"] == role_df["id"]], "right_outer").show()
     emp_df.join(role_df, [emp_df["id"] == role_df["id"]], "left_anti").show()
+    emp_df.join(role_df, [emp_df["id"] == role_df["id"]], "left_semi").show()
     emp_df.join(role_df, [emp_df["id"] == role_df["id"]], "full").show()
 
     # cross join
